@@ -1,4 +1,6 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:sessional_2/MainScreen.dart';
 
 class ThirdScreen extends StatelessWidget {
   @override
@@ -9,6 +11,9 @@ class ThirdScreen extends StatelessWidget {
         //
         // }),
         title: Text("Level 2"),
+        automaticallyImplyLeading: true,
+        leading: IconButton(icon: Icon(Icons.arrow_back_sharp), onPressed: ()=> MainScreen(),
+        ),
       ),
     );
 

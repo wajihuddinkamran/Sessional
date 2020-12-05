@@ -1,4 +1,5 @@
 
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'secondscreen.dart';
 import 'thirdscreen.dart';
@@ -12,6 +13,9 @@ class MainScreen extends StatelessWidget {
         //
         // }),
         title: Text("SELECT LEVEL"),
+        automaticallyImplyLeading: true,
+        leading: IconButton(icon: Icon(Icons.arrow_back_sharp), onPressed: ()=> exit(0),
+        ),
       ),
 
       body: Center(child: RaisedButton(
@@ -29,11 +33,10 @@ class MainScreen extends StatelessWidget {
           );
         },
       ),
-      ),
 
-      body: Center(child: RaisedButton(
+      child:RaisedButton(
 
-        child: Text('Level 2',style: TextStyle(
+        child: Text('Level 1',style: TextStyle(
           color: Colors.cyanAccent,
 
         ),
@@ -41,12 +44,11 @@ class MainScreen extends StatelessWidget {
         color: Colors.blue,
         onPressed: (){
           Navigator.push(context,
-          MaterialPageRoute(builder: (context)=>ThirdScreen()
-          ),
+            MaterialPageRoute(builder: (context)=>ThirdScreen()
+            ),
           );
         },
-      ),
-      ),
+      ),),
     );
   }
 }
