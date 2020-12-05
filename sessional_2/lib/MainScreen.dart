@@ -33,7 +33,7 @@ class MainScreen extends StatelessWidget {
 
       body: Center(child: RaisedButton(
 
-        child: Text('Level 1',style: TextStyle(
+        child: Text('Level 2',style: TextStyle(
           color: Colors.cyanAccent,
 
         ),
